@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculadoraAndroid">
@@ -11,12 +13,13 @@
         android:id="@+id/texto_calculadora"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:textAlignment="center"
+        android:textSize="25dp"
         android:text=""
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/clean_button"/>
-
 
     <Button
         android:id="@+id/clean_button"
@@ -29,30 +32,30 @@
         android:text="C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/texto_calculadora"
-        app:layout_constraintRight_toLeftOf="@id/parenteses_button"/>
+        app:layout_constraintRight_toLeftOf="@id/left_parenteses_button"/>
 
     <Button
-        android:id="@+id/parenteses_button"
+        android:id="@+id/left_parenteses_button"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/oval_background"
         app:backgroundTint="@null"
-        android:text="( )"
+        android:text="("
         app:layout_constraintTop_toBottomOf="@id/texto_calculadora"
         app:layout_constraintLeft_toRightOf="@id/clean_button"
-        app:layout_constraintRight_toLeftOf="@id/percent_button"/>
+        app:layout_constraintRight_toLeftOf="@id/right_parenteses_button"/>
 
     <Button
-        android:id="@+id/percent_button"
+        android:id="@+id/right_parenteses_button"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/oval_background"
         app:backgroundTint="@null"
-        android:text="%"
+        android:text=")"
         app:layout_constraintTop_toBottomOf="@id/texto_calculadora"
-        app:layout_constraintLeft_toRightOf="@id/parenteses_button"
+        app:layout_constraintLeft_toRightOf="@id/left_parenteses_button"
         app:layout_constraintRight_toLeftOf="@id/division_button"/>
 
     <Button
@@ -64,7 +67,7 @@
         android:background="@drawable/oval_background"
         android:text="/"
         app:layout_constraintTop_toBottomOf="@id/texto_calculadora"
-        app:layout_constraintLeft_toRightOf="@id/percent_button"
+        app:layout_constraintLeft_toRightOf="@id/right_parenteses_button"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
@@ -111,7 +114,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/oval_background"
-        android:text="x"
+        android:text="*"
         app:layout_constraintTop_toBottomOf="@id/clean_button"
         app:layout_constraintLeft_toRightOf="@id/nine_button"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -215,14 +218,14 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
-        android:id="@+id/plus_minus_button"
+        android:id="@+id/dot_button"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/oval_background"
         app:backgroundTint="@null"
-        android:text="+/-"
+        android:text="."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/one_button"
         app:layout_constraintRight_toLeftOf="@id/zero_button"/>
@@ -236,7 +239,7 @@
         app:backgroundTint="@null"
         android:text="0"
         app:layout_constraintTop_toBottomOf="@id/one_button"
-        app:layout_constraintLeft_toRightOf="@id/plus_minus_button"
+        app:layout_constraintLeft_toRightOf="@id/dot_button"
         app:layout_constraintRight_toLeftOf="@id/comma_button"/>
 
     <Button
@@ -247,9 +250,21 @@
         android:background="@drawable/oval_background"
         app:backgroundTint="@null"
         android:text=","
-        app:layout_constraintTop_toBottomOf="@id/one_button"
+        app:layout_constraintTop_toBottomOf="@id/three_button"
         app:layout_constraintLeft_toRightOf="@id/zero_button"
-        app:layout_constraintRight_toLeftOf="@id/equal_button"/>
+        app:layout_constraintRight_toLeftOf="@id/percent_button"/>
+
+    <Button
+        android:id="@+id/percent_button"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/oval_background"
+        android:text="%"
+        app:layout_constraintTop_toBottomOf="@id/one_button"
+        app:layout_constraintLeft_toRightOf="@id/comma_button"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/equal_button"
@@ -259,8 +274,9 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/oval_background"
         android:text="="
-        app:layout_constraintTop_toBottomOf="@id/one_button"
+        app:layout_constraintTop_toBottomOf="@id/percent_button"
         app:layout_constraintLeft_toRightOf="@id/comma_button"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
