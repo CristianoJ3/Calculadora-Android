@@ -62,8 +62,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/oval_background"
-                    android:text="C"
-                    app:backgroundTint="@null" />
+                    android:text="C"/>
 
                 <Button
                     android:id="@+id/left_parenteses_button"

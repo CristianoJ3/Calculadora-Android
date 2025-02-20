@@ -2,6 +2,7 @@ package com.example.calculadoraandroid
 
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculadoraandroid.databinding.CalculadoraAndroidActivityBinding
 import org.mariuszgromada.math.mxparser.Expression
@@ -68,7 +69,8 @@ class CalculadoraAndroid : AppCompatActivity() {
                 resultadoFinal.text = resultado.toString()
                 textoCalculadora.text = ""
             } catch (e: Exception) {
-                resultadoFinal.text = "Erro"
+                //resultadoFinal.text = "Erro"
+                Toast.makeText(this, "ERRO!", Toast.LENGTH_SHORT).show()
             }
         }
 
