@@ -104,7 +104,7 @@ class CalculadoraAndroid : AppCompatActivity() {
 
                 // apenas adiciona operador ao cálculo se o campo de texto não
                 // estiver vazio e se o caractere anterior for um número
-                if (textoAtual.isNotEmpty() && textoAtual.last().isDigit()) {
+                if (textoAtual.isNotEmpty() && textoAtual.last().isDigit() || textoAtual.last() == ')') {
                     textoCalculadora.append(botao.text)
                 }
             }
