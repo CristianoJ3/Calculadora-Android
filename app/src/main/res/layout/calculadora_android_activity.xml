@@ -256,6 +256,7 @@
                     android:layout_marginTop="2dp"
                     android:background="@drawable/oval_background"
                     android:src="@drawable/ic_delete_button"
+                    android:contentDescription="Delete Button"
                     app:backgroundTint="@null" />
 
                 <Button
